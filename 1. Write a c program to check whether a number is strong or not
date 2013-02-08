@@ -1,0 +1,74 @@
+
+Code 1:
+
+#include<stdio.h>
+int main(){
+  int num,i,f,r,sum=0,temp;
+
+  printf("Enter a number: ");
+  scanf("%d",&num);
+ 
+  temp=num;
+  while(num){
+      i=1,f=1;
+      r=num%10;
+
+      while(i<=r){
+         f=f*i;
+        i++;
+      }
+      sum=sum+f;
+      num=num/10;
+  }
+  if(sum==temp)
+      printf("%d is a strong number",temp);
+  else
+      printf("%d is not a strong number",temp);
+
+  return 0;
+}
+
+Sample output:
+Enter a number: 145
+145 is a strong number
+
+Code 2:
+1. C program for strong number
+2. Strong number program in c
+
+#include<stdio.h>
+int main(){
+  int num,i,f,r,sum,temp;
+  int min,max;
+
+  printf("Enter minimum range: ");
+  scanf("%d",&min);
+
+  printf("Enter maximum range: ");
+  scanf("%d",&max);
+
+  printf("Strong numbers in given range are: ");
+  for(num=min; num <= max; num++){
+      temp = num;
+      sum=0;
+
+      while(temp){
+           i=1;
+           f=1;
+           r=temp%10;
+
+           while(i<=r){
+             f=f*i;
+             i++;
+           }
+         sum=sum+f;
+         temp=temp/10;
+      }
+        
+      if(sum==num)
+           printf("%d ",num);
+  }
+  return 0;
+}
+
+
