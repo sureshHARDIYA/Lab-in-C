@@ -1,6 +1,4 @@
 
-Code 1:
-
 #include<stdio.h>
 int main(){
   int num,i,f,r,sum=0,temp;
