@@ -1,0 +1,10 @@
+
+
+#include<stdio.h>
+
+char *program=”#include<stdio.h>%cchar *program=%c%s%c;%cvoid main()%c{%cprintf(program,10,34,program,34,10, 10,10,10);%c}”;
+
+void main()
+{
+printf(program,10,34,program,34,10,10,10,10);
+}
