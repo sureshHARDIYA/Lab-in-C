@@ -1,0 +1,78 @@
+
+Code 1:
+1. C program to add digits of a number
+2. C program for sum of digits of a number
+3. C program to calculate sum of digits
+
+#include<stdio.h>
+int main(){
+  int num,sum=0,r;
+  printf("Enter a number: ");
+  scanf("%d",&num);
+  while(num){
+      r=num%10;
+      num=num/10;
+      sum=sum+r;
+  }
+  printf("Sum of digits of number:  %d",sum);
+  return 0;
+}
+
+Sample output:
+Enter a number: 123
+Sum of digits of number:  6
+
+Code 2:
+1. Sum of digits of a number in c using for loop
+
+#include<stdio.h>
+int main(){
+  int num,sum=0,r;
+  printf("Enter a number: ");
+  scanf("%d",&num);
+
+  for(;num!=0;num=num/10){
+      r=num%10;
+      sum=sum+r;
+  }
+  printf("Sum of digits of number:  %d",sum);
+  return 0;
+}
+
+Sample output:
+Enter a number: 567
+Sum of digits of number:  18
+
+Code 3:
+1. Sum of digits in c using recursion
+
+#include<stdio.h>
+
+int getSum(int);
+int main(){
+  int num,sum;
+  printf("Enter a number: ");
+  scanf("%d",&num);
+
+  sum = getSum(num);
+
+  printf("Sum of digits of number:  %d",sum);
+  return 0;
+}
+
+int getSum(int num){
+
+    static int sum =0,r;
+
+    if(num!=0){
+      r=num%10;
+      sum=sum+r;
+      getSum(num/10);
+    }
+
+    return sum;
+}
+
+Sample output:
+Enter a number: 45
+Sum of digits of number:  9
